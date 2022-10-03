@@ -374,7 +374,7 @@ async function runProtooWebSocketServer() {
         const roomId = u.query["roomId"];
         const peerId = u.query["peerId"];
 
-        if (!roomId || typeof roomId !== "string" || !peerId || peerId !== "string") {
+        if (!roomId || typeof roomId !== "string" || !peerId || typeof peerId !== "string") {
             reject(400, "Connection request without roomId and/or peerId");
 
             return;
